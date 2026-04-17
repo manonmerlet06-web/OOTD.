@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Search, Filter, Hash, TrendingUp, Archive, Plus, ArrowRight } from "lucide-react";
+import { useWaitlist } from "../context/WaitlistContext";
 
 const categories = ["All", "Tops", "Bottoms", "Outerwear", "Shoes", "Accessories"];
 
@@ -15,6 +16,7 @@ const closetItems = [
 ];
 
 export default function ClosetPage() {
+  const { open } = useWaitlist();
   return (
     <div className="pt-24 min-h-screen bg-[#FDFCF8]">
       {/* Hero Section */}
@@ -244,6 +246,7 @@ export default function ClosetPage() {
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={open}
             className="bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 mx-auto shadow-2xl hover:shadow-brand-pink/30 cursor-pointer"
           >
             Start building your closet <ArrowRight size={20} />

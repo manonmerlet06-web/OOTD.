@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
 import { ArrowRight, Download } from "lucide-react";
+import { useWaitlist } from "../context/WaitlistContext";
 
 export default function Hero() {
+  const { open } = useWaitlist();
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6 overflow-hidden">
       {/* Background Blobs */}
@@ -25,10 +28,16 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="bg-brand-black text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-transform cursor-pointer">
+            <button 
+              onClick={open}
+              className="bg-brand-black text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-transform cursor-pointer"
+            >
               Download the app <Download size={20} />
             </button>
-            <button className="bg-white border-2 border-brand-black px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-brand-black hover:text-white transition-all cursor-pointer">
+            <button 
+              onClick={open}
+              className="bg-white border-2 border-brand-black px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-brand-black hover:text-white transition-all cursor-pointer"
+            >
               Get started <ArrowRight size={20} />
             </button>
           </div>

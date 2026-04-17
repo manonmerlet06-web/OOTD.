@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Sparkles, Heart, Share2, Plus, ArrowRight, User, Palette, Layers } from "lucide-react";
+import { useWaitlist } from "../context/WaitlistContext";
 
 const editorialLooks = [
   { id: 1, title: "Golden Hour Glow", url: "https://images.unsplash.com/photo-1529139513402-5833777c615f?auto=format&fit=crop&q=80&w=800", size: "lg" },
@@ -9,6 +10,7 @@ const editorialLooks = [
 ];
 
 export default function StylePage() {
+  const { open } = useWaitlist();
   return (
     <div className="pt-24 min-h-screen bg-brand-black text-white">
       {/* Hero Section - Editorial Feel */}
@@ -161,7 +163,10 @@ export default function StylePage() {
                 <Layers className="text-brand-lavender w-16 h-16 mb-6" />
                 <h3 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">All your inspiration, <br /> in one place.</h3>
                 <p className="text-gray-500 max-w-md mb-8">Connected to your item inventory, so you always know if you can pull off a saved look.</p>
-                <button className="bg-brand-lavender text-brand-black px-10 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform flex items-center gap-3">
+                <button 
+                    onClick={open}
+                    className="bg-brand-lavender text-brand-black px-10 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform flex items-center gap-3"
+                >
                     Sync Inspiration <Sparkles size={16} />
                 </button>
           </div>
@@ -207,7 +212,10 @@ export default function StylePage() {
           <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase">
             Start <span className="text-brand-pink italic">styling</span>
           </h2>
-          <button className="bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 mx-auto shadow-2xl hover:shadow-brand-pink/30 cursor-pointer">
+          <button 
+            onClick={open}
+            className="bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 mx-auto shadow-2xl hover:shadow-brand-pink/30 cursor-pointer"
+          >
               Get Started with OOTD <ArrowRight size={20} />
           </button>
         </div>

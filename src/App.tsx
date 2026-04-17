@@ -4,11 +4,14 @@ import Home from "./components/Home";
 import FeaturesPage from "./components/FeaturesPage";
 import ClosetPage from "./components/ClosetPage";
 import StylePage from "./components/StylePage";
+import WaitlistModal from "./components/WaitingList";
 import Footer from "./components/Footer";
 import { ShoppingBag } from "lucide-react";
+import { useWaitlist } from "./context/WaitlistContext";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<"home" | "features" | "closet" | "style">("home");
+  const { open, isOpen, close } = useWaitlist();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -93,19 +96,22 @@ export default function App() {
             STYLE
           </button>
         </div>
-        <button className={`px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 hover:scale-105 transition-all cursor-pointer ${
-          isScrolled 
-            ? "bg-brand-black text-white shadow-lg" 
-            : "bg-brand-black text-white shadow-xl"
-        }`}>
-          <ShoppingBag size={16} /> App
+        <button 
+          onClick={open}
+          className={`px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 hover:scale-105 transition-all cursor-pointer ${
+            isScrolled 
+              ? "bg-brand-black text-white shadow-lg" 
+              : "bg-brand-black text-white shadow-xl"
+          }`}
+        >
+          <ShoppingBag size={16} /> Join
         </button>
       </nav>
 
       {renderPage()}
       
-      {/* Home has Footer inside. Other pages need it. */}
-      {currentPage !== "home" && <Footer />}
+      <WaitlistModal isOpen={isOpen} onClose={close} />
+      <Footer />
     </div>
   );
 }

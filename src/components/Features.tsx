@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Camera, Sparkles, Heart, ShoppingBag } from "lucide-react";
+import { useWaitlist } from "../context/WaitlistContext";
 
 const features = [
   {
@@ -33,6 +34,7 @@ const features = [
 ];
 
 export default function Features() {
+  const { open } = useWaitlist();
   return (
     <section className="py-24 px-6 bg-[#FDFCF8]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -43,7 +45,8 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: f.delay }}
             whileHover={{ scale: 1.02 }}
-            className={`${f.color} p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-between min-h-[320px] relative overflow-hidden group`}
+            onClick={open}
+            className={`${f.color} p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-between min-h-[320px] relative overflow-hidden group cursor-pointer`}
           >
             <div className="z-10">
               <div className="bg-white/90 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm">

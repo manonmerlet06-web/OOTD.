@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Camera, Sparkles, LayoutGrid, ShoppingBag, Heart, Smartphone, ArrowRight } from "lucide-react";
+import { useWaitlist } from "../context/WaitlistContext";
 
 const features = [
   {
@@ -37,6 +38,7 @@ const features = [
 ];
 
 export default function FeaturesPage() {
+  const { open } = useWaitlist();
   return (
     <div className="pt-24 min-h-screen bg-[#FDFCF8]">
       {/* Hero Section */}
@@ -233,10 +235,16 @@ export default function FeaturesPage() {
             Join 50,000+ fashion enthusiasts building their dream digital closet.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-            <button className="w-full sm:w-auto bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-2xl hover:shadow-brand-pink/20 cursor-pointer">
+            <button 
+              onClick={open}
+              className="w-full sm:w-auto bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-2xl hover:shadow-brand-pink/20 cursor-pointer"
+            >
               Start styling with OOTD <ArrowRight size={20} />
             </button>
-            <button className="w-full sm:w-auto bg-white border-2 border-brand-black text-brand-black px-12 py-6 rounded-full font-black text-lg hover:bg-gray-50 transition-colors cursor-pointer">
+            <button 
+              onClick={open}
+              className="w-full sm:w-auto bg-white border-2 border-brand-black text-brand-black px-12 py-6 rounded-full font-black text-lg hover:bg-gray-50 transition-colors cursor-pointer"
+            >
               Watch Demo
             </button>
           </div>
