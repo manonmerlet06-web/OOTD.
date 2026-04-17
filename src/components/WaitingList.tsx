@@ -7,7 +7,7 @@ interface WaitlistModalProps {
 }
 
 export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
-  const formUrl = "https://4b7e2a10.sibforms.com/serve/MUIFAI3qF5riXtVjE_Ku32Fd9K5OEn2SEOD6TVtKqdlhZN297-G2m5UoanpWSDtgYyrKJq3zkwJtlZvhQhA4FSN4ERyQRxYC6UEn-9E17ef-tktbIu7WL-4Usy0kK8GRTvfXsaMpNtGo4vpip5Wx0WzBhvFdfWkALb4YdDW-llVSkW9J3GNLcw8MaDwI3eOabtcpiFvapeQVslq6ZQ==";
+  const formUrl = "https://4b7e2a10.sibforms.com/serve/MUIFAB_xrCnLKV6aHjeEoQ4beZialYkB7nnCJ0uU97-naZlccmBiOkkRDuQtU0QIdSban7oeQFfObiAtmGzWaMI28uPP8teBN_rf4GBlb6w2FgkF72corctnPpCmzRmDWm3_Koq7NHwBzC13E45qmMPcEcrYFIukWYiCW26kmjDbjTBMvuyZBAGNUbkbrQJ1tnyO-pAYZQpVexF_DA==";
 
   return (
     <AnimatePresence>
@@ -27,7 +27,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="fixed inset-6 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:top-12 md:bottom-12 md:w-full md:max-w-4xl bg-white rounded-[2.5rem] shadow-2xl z-[101] overflow-hidden flex flex-col"
+            className="fixed inset-6 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:top-8 md:bottom-8 md:w-full md:max-w-4xl bg-white rounded-[2.5rem] shadow-2xl z-[101] overflow-hidden flex flex-col"
           >
             {/* Header */}
             <div className="px-8 py-6 flex items-center justify-between border-b border-gray-100 bg-white shrink-0">
