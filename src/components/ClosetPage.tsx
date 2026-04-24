@@ -1,16 +1,22 @@
 import { motion } from "motion/react";
 import { Search, Filter, Hash, TrendingUp, Archive, Plus, ArrowRight } from "lucide-react";
 import { useWaitlist } from "../context/WaitlistContext";
+import dressImg from "../assets/image/dress.jpg";
+import sneakersImg from "../assets/image/sneakers.jpg";
+import jacketImg from "../assets/image/jacket.jpg";
+import bagImg from "../assets/image/bag.jpg";
+import hatImg from "../assets/image/hat.jpg";
+import jeansImg from "../assets/image/jeans.jpg";
 
 const categories = ["All", "Tops", "Bottoms", "Outerwear", "Shoes", "Accessories"];
 
 const closetItems = [
-  { id: 1, name: "Silk Slip Dress", category: "Dresses", url: "/image/dress.jpg", color: "bg-brand-pink" },
-  { id: 2, name: "Air Force 1", category: "Shoes", url: "/image/sneakers.jpg", color: "bg-brand-yellow" },
-  { id: 3, name: "Vintage Leather", category: "Outerwear", url: "/image/jacket.jpg", color: "bg-brand-green" },
-  { id: 4, name: "Shoulder Bag", category: "Accessories", url: "/image/bag.jpg", color: "bg-brand-lavender" },
-  { id: 5, name: "Beret Hat", category: "Accessories", url: "/image/hat.jpg", color: "bg-brand-pink" },
-  { id: 6, name: "Straight Jeans", category: "Bottoms", url: "/image/jeans.jpg", color: "bg-brand-yellow" },
+  { id: 1, name: "Silk Slip Dress", category: "Dresses", url: dressImg, color: "bg-brand-pink" },
+  { id: 2, name: "Air Force 1", category: "Shoes", url: sneakersImg, color: "bg-brand-yellow" },
+  { id: 3, name: "Vintage Leather", category: "Outerwear", url: jacketImg, color: "bg-brand-green" },
+  { id: 4, name: "Shoulder Bag", category: "Accessories", url: bagImg, color: "bg-brand-lavender" },
+  { id: 5, name: "Beret Hat", category: "Accessories", url: hatImg, color: "bg-brand-pink" },
+  { id: 6, name: "Straight Jeans", category: "Bottoms", url: jeansImg, color: "bg-brand-yellow" },
   { id: 7, name: "Floral Skirt", category: "Bottoms", url: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=800", color: "bg-brand-lavender" },
   { id: 8, name: "Knit Sweater", category: "Tops", url: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&q=80&w=800", color: "bg-brand-green" },
 ];
@@ -199,7 +205,7 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src="/image/jacket.jpg" className="w-full h-full object-cover" alt="Item" />
+                        <img src={jacketImg} className="w-full h-full object-cover" alt="Item" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Most Worn</p>
@@ -212,7 +218,7 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src="/image/hat.jpg" className="w-full h-full object-cover" alt="Item" />
+                        <img src={hatImg} className="w-full h-full object-cover" alt="Item" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Least Worn</p>

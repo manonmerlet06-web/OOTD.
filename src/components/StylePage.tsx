@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { Sparkles, Heart, Share2, Plus, ArrowRight, User, Palette, Layers } from "lucide-react";
 import { useWaitlist } from "../context/WaitlistContext";
+import jacketImg from "../assets/image/jacket.jpg";
+import sneakersImg from "../assets/image/sneakers.jpg";
 
 const editorialLooks = [
   { id: 1, title: "Golden Hour Glow", url: "https://images.unsplash.com/photo-1529139513402-5833777c615f?auto=format&fit=crop&q=80&w=800", size: "lg" },
@@ -71,14 +73,14 @@ export default function StylePage() {
                   whileHover={{ scale: 1.05, rotate: -2 }}
                   className="bg-brand-pink/20 rounded-3xl aspect-square p-8 flex items-center justify-center transform rotate-2"
                 >
-                  <img src="/image/jacket.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
+                  <img src={jacketImg} className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
                 </motion.div>
                 <div className="pt-12">
                   <motion.div 
                      whileHover={{ scale: 1.05, rotate: 2 }}
                     className="bg-brand-yellow/20 rounded-3xl aspect-square p-8 flex items-center justify-center transform -rotate-3"
                   >
-                    <img src="/image/sneakers.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
+                    <img src={sneakersImg} className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
                   </motion.div>
                 </div>
               </div>

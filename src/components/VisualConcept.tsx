@@ -1,12 +1,18 @@
 import { motion } from "motion/react";
+import dressImg from "../assets/image/dress.jpg";
+import sneakersImg from "../assets/image/sneakers.jpg";
+import jacketImg from "../assets/image/jacket.jpg";
+import bagImg from "../assets/image/bag.jpg";
+import hatImg from "../assets/image/hat.jpg";
+import jeansImg from "../assets/image/jeans.jpg";
 
 const items = [
-  { id: 1, color: "bg-brand-pink", seed: "dress", url: "/image/dress.jpg" },
-  { id: 2, color: "bg-brand-yellow", seed: "sneakers", url: "/image/sneakers.jpg" },
-  { id: 3, color: "bg-brand-green", seed: "jacket", url: "/image/jacket.jpg" },
-  { id: 4, color: "bg-brand-lavender", seed: "bag", url: "/image/bag.jpg" },
-  { id: 5, color: "bg-brand-pink", seed: "hat", url: "/image/hat.jpg" },
-  { id: 6, color: "bg-brand-yellow", seed: "jeans", url: "/image/jeans.jpg" },
+  { id: 1, color: "bg-brand-pink", seed: "dress", url: dressImg },
+  { id: 2, color: "bg-brand-yellow", seed: "sneakers", url: sneakersImg },
+  { id: 3, color: "bg-brand-green", seed: "jacket", url: jacketImg },
+  { id: 4, color: "bg-brand-lavender", seed: "bag", url: bagImg },
+  { id: 5, color: "bg-brand-pink", seed: "hat", url: hatImg },
+  { id: 6, color: "bg-brand-yellow", seed: "jeans", url: jeansImg },
 ];
 
 export default function VisualConcept() {
