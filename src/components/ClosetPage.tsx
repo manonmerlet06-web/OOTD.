@@ -201,7 +201,7 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src="/image/jacket.jpg" className="w-full h-full object-cover" alt="Item" />
+                        <img src="/image/jacket.jpg" className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Most Worn</p>
@@ -214,7 +214,7 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src="/image/hat.jpg" className="w-full h-full object-cover" alt="Item" />
+                        <img src="/image/hat.jpg" className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Least Worn</p>

@@ -71,14 +71,14 @@ export default function StylePage() {
                   whileHover={{ scale: 1.05, rotate: -2 }}
                   className="bg-brand-pink/20 rounded-3xl aspect-square p-8 flex items-center justify-center transform rotate-2"
                 >
-                  <img src="/image/jacket.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
+                  <img src="/image/jacket.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" referrerPolicy="no-referrer" />
                 </motion.div>
                 <div className="pt-12">
                   <motion.div 
                      whileHover={{ scale: 1.05, rotate: 2 }}
                     className="bg-brand-yellow/20 rounded-3xl aspect-square p-8 flex items-center justify-center transform -rotate-3"
                   >
-                    <img src="/image/sneakers.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
+                    <img src="/image/sneakers.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" referrerPolicy="no-referrer" />
                   </motion.div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function StylePage() {
                 <div className="flex -space-x-3">
                     {[1,2,3].map(i => (
                         <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-200">
-                             <img src={`https://i.pravatar.cc/40?u=${i}`} alt="user" />
+                             <img src={`https://i.pravatar.cc/40?u=${i}`} alt="user" referrerPolicy="no-referrer" />
                         </div>
                     ))}
                     <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-yellow flex items-center justify-center text-[10px] font-black italic">
@@ -148,7 +148,7 @@ export default function StylePage() {
                 className={`relative rounded-[2rem] overflow-hidden cursor-pointer group glass-card p-2 border-white/40 ${look.size === 'lg' ? 'row-span-2' : ''}`}
               >
                 <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-gray-100">
-                  <img src={look.url} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={look.title} />
+                  <img src={look.url} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={look.title} referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute bottom-6 left-6 right-6 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 text-white">
                     <p className="text-xs font-bold uppercase tracking-widest mb-1">Look #{look.id}</p>
