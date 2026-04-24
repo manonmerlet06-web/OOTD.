@@ -71,14 +71,14 @@ export default function StylePage() {
                   whileHover={{ scale: 1.05, rotate: -2 }}
                   className="bg-brand-pink/20 rounded-3xl aspect-square p-8 flex items-center justify-center transform rotate-2"
                 >
-                  <img src="/image/jacket.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" referrerPolicy="no-referrer" />
+                  <img src="/image/jacket.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
                 </motion.div>
                 <div className="pt-12">
                   <motion.div 
                      whileHover={{ scale: 1.05, rotate: 2 }}
                     className="bg-brand-yellow/20 rounded-3xl aspect-square p-8 flex items-center justify-center transform -rotate-3"
                   >
-                    <img src="/image/sneakers.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" referrerPolicy="no-referrer" />
+                    <img src="/image/sneakers.jpg" className="w-full h-full object-contain mix-blend-multiply" alt="Mix & Match" />
                   </motion.div>
                 </div>
               </div>

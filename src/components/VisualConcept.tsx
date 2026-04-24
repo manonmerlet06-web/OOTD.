@@ -41,7 +41,6 @@ export default function VisualConcept() {
                   src={item.url} 
                   alt={item.seed}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity">

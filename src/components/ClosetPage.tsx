@@ -58,7 +58,6 @@ export default function ClosetPage() {
                             src={closetItems[i % closetItems.length].url} 
                             className="w-full h-full object-cover" 
                             alt="Closet item"
-                            referrerPolicy="no-referrer"
                         />
                     </div>
                 </motion.div>
@@ -114,7 +113,6 @@ export default function ClosetPage() {
                     src={item.url} 
                     alt={item.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
@@ -201,7 +199,7 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src="/image/jacket.jpg" className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
+                        <img src="/image/jacket.jpg" className="w-full h-full object-cover" alt="Item" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Most Worn</p>
@@ -214,7 +212,7 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src="/image/hat.jpg" className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
+                        <img src="/image/hat.jpg" className="w-full h-full object-cover" alt="Item" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Least Worn</p>
