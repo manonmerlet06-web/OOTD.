@@ -9,6 +9,6 @@ export const IMAGES = {
   bag: "https://lh3.googleusercontent.com/d/1s0tKuPTjnves9dRWlcEpDqsCPjd5sIeV",
   hat: "https://lh3.googleusercontent.com/d/1uGhbpjgMzVHiW84A4Hbtw6H3_13GQ0SS",
   jeans: "https://lh3.googleusercontent.com/d/1z8Kx9yZRNH1SFEZAzqxnXINfMn4C2jRi",
-  oot1: "https://lh3.googleusercontent.com/d/https://drive.google.com/file/d/1bt8LuXVYbmCe20gkCb1ldD055ZwkMUty/view?usp=drive_link", // Remplacez par l'ID réel de oot1
-  ootd2: "https://lh3.googleusercontent.com/d/https://drive.google.com/file/d/1qIYF8NH0oCto4OoBl2nYxvAXe8cftLEH/view?usp=drive_link" // Remplacez par l'ID réel de ootd2
+  oot1: "https://lh3.googleusercontent.com/d/1bt8LuXVYbmCe20gkCb1ldD055ZwkMUty",
+  ootd2: "https://lh3.googleusercontent.com/d/1qIYF8NH0oCto4OoBl2nYxvAXe8cftLEH"
 };
