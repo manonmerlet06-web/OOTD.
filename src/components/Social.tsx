@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { IMAGES } from "../constants/images";
 
 export default function Social() {
   return (
@@ -32,14 +33,14 @@ export default function Social() {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="aspect-[3/5] rounded-[2rem] overflow-hidden bg-gray-800"
               >
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                <img src={IMAGES.oot1} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 1" />
               </motion.div>
               <motion.div 
                 animate={{ y: [0, 30, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="aspect-[3/5] rounded-[2rem] overflow-hidden bg-gray-800 translate-y-12"
               >
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+                <img src={IMAGES.ootd2} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 2" />
               </motion.div>
             </div>
             
