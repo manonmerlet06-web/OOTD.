@@ -1,6 +1,6 @@
 /**
  * Configuration des liens directs Google Drive pour les images de l'application.
- * Format : https://drive.google.com/drive/folders/1Npo3W2tU_AKAaM7f1ijNIwbKi1Nadbj7?usp=sharing
+ * Format : https://drive.google.com/file/d/1BT9rn89nzwu1B2gsCvPBfronfIKiPzn6/view?usp=sharing
  */
 export const IMAGES = {
   dress: "https://drive.google.com/file/d/1BT9rn89nzwu1B2gsCvPBfronfIKiPzn6/view?usp=drive_link",
