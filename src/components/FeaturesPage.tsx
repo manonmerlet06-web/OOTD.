@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Camera, Sparkles, LayoutGrid, ShoppingBag, Heart, Smartphone, ArrowRight } from "lucide-react";
 import { useWaitlist } from "../context/WaitlistContext";
+import { IMAGES } from "../constants/images";
 
 const features = [
   {
@@ -82,7 +83,7 @@ export default function FeaturesPage() {
               className="absolute w-[200px] h-[400px] md:w-[280px] md:h-[560px] bg-white rounded-[40px] shadow-2xl border-[8px] border-brand-black overflow-hidden z-20 left-1/2 -translate-x-full"
             >
               <img 
-                src="https://drive.google.com/file/d/1bt8LuXVYbmCe20gkCb1ldD055ZwkMUty/view?usp=drive_link" 
+                src={IMAGES.ootd1} 
                 className="w-full h-full object-cover" 
                 alt="App Interface"
                 referrerPolicy="no-referrer"
@@ -95,7 +96,7 @@ export default function FeaturesPage() {
               className="absolute w-[200px] h-[400px] md:w-[280px] md:h-[560px] bg-white rounded-[40px] shadow-2xl border-[8px] border-brand-black overflow-hidden z-10 left-1/2 translate-x-10"
             >
               <img 
-                src="https://images.unsplash.com/photo-1554412930-c74f6607f8c0?auto=format&fit=crop&q=80&w=800" 
+                src={IMAGES.ootd2} 
                 className="w-full h-full object-cover" 
                 alt="App Interface"
                 referrerPolicy="no-referrer"
