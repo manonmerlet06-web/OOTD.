@@ -33,14 +33,14 @@ export default function Social() {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="aspect-[3/5] rounded-[2rem] overflow-hidden bg-gray-800"
               >
-                <img src={IMAGES.ootd1} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 1" />
+                <img src={IMAGES.ootd1} className="w-full h-full object-cover hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 1" />
               </motion.div>
               <motion.div 
                 animate={{ y: [0, 30, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 className="aspect-[3/5] rounded-[2rem] overflow-hidden bg-gray-800 translate-y-12"
               >
-                <img src={IMAGES.ootd2} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 2" />
+                <img src={IMAGES.ootd2} className="w-full h-full object-cover hover:scale-105 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 2" />
               </motion.div>
             </div>
             

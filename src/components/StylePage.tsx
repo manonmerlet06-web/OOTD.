@@ -43,20 +43,23 @@ export default function StylePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="flex-1 flex justify-end"
+            className="flex-1 flex justify-end gap-4"
           >
-            <div className="relative w-full max-w-sm aspect-[3/4] rounded-[2rem] overflow-hidden group">
+            <div className="relative w-full max-w-[200px] aspect-[3/4] rounded-[2rem] overflow-hidden group">
               <img 
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
-                className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000"
-                alt="Editorial cover"
+                src={IMAGES.ootd1} 
+                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
+                alt="OOTD 1"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 border-[20px] border-white/5 pointer-events-none" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-xs font-bold leading-tight opacity-70">Cover Image: Identity & Expression</p>
-                <p className="text-xl font-black italic">Refining the personal narrative.</p>
-              </div>
+            </div>
+            <div className="relative w-full max-w-[200px] aspect-[3/4] rounded-[2rem] overflow-hidden group translate-y-12">
+              <img 
+                src={IMAGES.ootd2} 
+                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
+                alt="OOTD 2"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </motion.div>
         </div>
