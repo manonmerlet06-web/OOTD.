@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Download } from "lucide-react";
 import { useWaitlist } from "../context/WaitlistContext";
+import { IMAGES } from "../constants/images";
 
 export default function Hero() {
   const { open } = useWaitlist();
@@ -52,7 +53,7 @@ export default function Hero() {
             className="relative z-20 w-[280px] h-[580px] bg-brand-black rounded-[3rem] border-[8px] border-brand-black shadow-2xl overflow-hidden"
           >
             <img 
-              src="https://picsum.photos/seed/ootd-app/400/800" 
+              src={IMAGES.ootd1} 
               alt="OOTD App Interface" 
               className="w-full h-full object-cover opacity-90"
               referrerPolicy="no-referrer"
