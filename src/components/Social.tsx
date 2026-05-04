@@ -33,7 +33,7 @@ export default function Social() {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="aspect-[3/5] rounded-[2rem] overflow-hidden bg-gray-800"
               >
-                <img src={IMAGES.oot1} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 1" />
+                <img src={IMAGES.ootd1} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" alt="OOTD Preview 1" />
               </motion.div>
               <motion.div 
                 animate={{ y: [0, 30, 0] }}

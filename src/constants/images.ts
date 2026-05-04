@@ -9,6 +9,6 @@ export const IMAGES = {
   bag: "https://lh3.googleusercontent.com/d/1s0tKuPTjnves9dRWlcEpDqsCPjd5sIeV",
   hat: "https://lh3.googleusercontent.com/d/1uGhbpjgMzVHiW84A4Hbtw6H3_13GQ0SS",
   jeans: "https://lh3.googleusercontent.com/d/1z8Kx9yZRNH1SFEZAzqxnXINfMn4C2jRi",
-  oot1: "https://lh3.googleusercontent.com/d/1bt8LuXVYbmCe20gkCb1ldD055ZwkMUty",
+  ootd1: "https://lh3.googleusercontent.com/d/1bt8LuXVYbmCe20gkCb1ldD055ZwkMUty",
   ootd2: "https://lh3.googleusercontent.com/d/1qIYF8NH0oCto4OoBl2nYxvAXe8cftLEH"
 };
