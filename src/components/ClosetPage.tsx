@@ -19,10 +19,9 @@ const closetItems = [
 export default function ClosetPage() {
   const { open } = useWaitlist();
   return (
-    <div className="pt-24 min-h-screen bg-[#FDFCF8]">
+    <div className="pt-24 min-h-screen relative">
       {/* Hero Section */}
-      <section className="px-6 py-16 text-center overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-yellow/20 rounded-full blur-[120px] -z-10 animate-pulse" />
+      <section className="px-6 py-16 text-center relative">
         
         <motion.h1 
           initial={{ opacity: 0, scale: 0.9 }}

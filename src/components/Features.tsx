@@ -36,7 +36,7 @@ const features = [
 export default function Features() {
   const { open } = useWaitlist();
   return (
-    <section className="py-24 px-6 bg-[#FDFCF8]">
+    <section className="py-24 px-6 relative">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((f, idx) => (
           <motion.div

@@ -45,12 +45,9 @@ const features = [
 export default function FeaturesPage() {
   const { open } = useWaitlist();
   return (
-    <div className="pt-24 min-h-screen bg-[#FDFCF8]">
+    <div className="pt-24 min-h-screen relative">
       {/* Hero Section */}
-      <section className="px-6 py-20 relative overflow-hidden">
-        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-brand-pink/30 rounded-full blur-[100px] -z-10" />
-        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-brand-yellow/30 rounded-full blur-[100px] -z-10" />
-        
+      <section className="px-6 py-20 relative">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

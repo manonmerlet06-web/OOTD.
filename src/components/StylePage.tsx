@@ -13,13 +13,9 @@ const editorialLooks = [
 export default function StylePage() {
   const { open } = useWaitlist();
   return (
-    <div className="pt-24 min-h-screen bg-brand-black text-white">
+    <div className="pt-24 min-h-screen relative">
       {/* Hero Section - Editorial Feel */}
-      <section className="px-6 py-20 relative overflow-hidden">
-        {/* Abstract Background Blobs */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-pink/10 rounded-full blur-[150px] -z-10" />
-        <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-brand-yellow/10 rounded-full blur-[150px] -z-10" />
-
+      <section className="px-6 py-20 relative bg-brand-black text-white rounded-b-[4rem] mx-2 shadow-2xl">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-12">
           <div className="flex-1">
             <motion.div

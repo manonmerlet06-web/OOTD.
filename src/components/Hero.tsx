@@ -7,12 +7,7 @@ export default function Hero() {
   const { open } = useWaitlist();
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6 overflow-hidden">
-      {/* Background Blobs */}
-      <div className="blob w-[300px] h-[300px] bg-brand-pink top-[-50px] left-[-50px] rounded-full" />
-      <div className="blob w-[400px] h-[400px] bg-brand-lavender bottom-[-100px] right-[-50px] rounded-full" />
-      <div className="blob w-[250px] h-[250px] bg-brand-yellow top-[20%] right-[10%] rounded-full" />
-
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6">
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}

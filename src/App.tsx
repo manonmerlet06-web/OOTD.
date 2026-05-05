@@ -45,7 +45,13 @@ export default function App() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Global Background Blobs */}
+      <div className="blob w-[400px] h-[400px] bg-brand-pink top-[-100px] left-[-100px] rounded-full opacity-40" />
+      <div className="blob w-[600px] h-[600px] bg-brand-lavender bottom-[10%] right-[-200px] rounded-full opacity-30" />
+      <div className="blob w-[300px] h-[300px] bg-brand-yellow top-[40%] left-[-150px] rounded-full opacity-20" />
+      <div className="blob w-[500px] h-[500px] bg-brand-green bottom-[-100px] left-[20%] rounded-full opacity-10" />
+
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-brand-pink z-[100] origin-left"
