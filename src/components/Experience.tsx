@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Plus } from "lucide-react";
+import { IMAGES } from "../constants/images";
 
 export default function Experience() {
   return (
@@ -13,13 +14,13 @@ export default function Experience() {
                 whileHover={{ scale: 1.05 }}
                 className="aspect-square bg-brand-lavender rounded-3xl overflow-hidden shadow-lg"
               >
-                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src={IMAGES.sweater} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </motion.div>
               <motion.div 
                 whileHover={{ scale: 1.05 }}
                 className="aspect-square bg-brand-yellow rounded-3xl overflow-hidden shadow-lg translate-y-8"
               >
-                <img src="https://images.unsplash.com/photo-1584305116359-ef81daaf4fd9?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src={IMAGES.jeans} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </motion.div>
             </div>
             
