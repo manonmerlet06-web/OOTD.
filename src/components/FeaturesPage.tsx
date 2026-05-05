@@ -9,7 +9,7 @@ const features = [
     description: "Snap your clothes and build your digital closet in minutes. Our AI automatically background-removes for a clean, editorial look.",
     icon: <Camera className="w-8 h-8" />,
     color: "bg-brand-green",
-    image: IMAGES.ootd1,
+    image: IMAGES.wardrobe,
     reverse: false
   },
   {
@@ -17,7 +17,7 @@ const features = [
     description: "Get AI-powered looks instantly. OOTD learns your style and suggests perfect combinations based on the weather, occasion, and your mood.",
     icon: <Sparkles className="w-8 h-8" />,
     color: "bg-brand-pink",
-    image: IMAGES.ootd2,
+    image: IMAGES.ootd5,
     reverse: true
   },
   {
@@ -25,7 +25,9 @@ const features = [
     description: "Save and organize your style inspirations from around the web. Connect your favorite looks to the items you already own.",
     icon: <LayoutGrid className="w-8 h-8" />,
     color: "bg-brand-lavender",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800",
+    image: IMAGES.inspiration,
+    objectFit: "object-contain",
+    aspectRatio: "aspect-auto",
     reverse: false
   },
   {
@@ -33,7 +35,9 @@ const features = [
     description: "Discover pieces that match your style and perfectly complement your existing wardrobe. Stop buying things that don't fit your vibe.",
     icon: <ShoppingBag className="w-8 h-8" />,
     color: "bg-brand-yellow",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800",
+    image: IMAGES.shopping,
+    objectFit: "object-contain",
+    aspectRatio: "aspect-auto",
     reverse: true
   }
 ];
@@ -141,21 +145,14 @@ export default function FeaturesPage() {
                 className="flex-1 relative group"
               >
                 <div className={`absolute inset-0 ${feature.color} rounded-[3rem] blur-[40px] opacity-20 group-hover:opacity-40 transition-opacity`} />
-                <div className={`relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/5] ${idx === 0 ? 'bg-brand-green' : ''}`}>
+                <div className={`relative rounded-[3rem] overflow-hidden shadow-2xl ${feature.aspectRatio || "aspect-[4/5]"} ${idx === 0 ? 'bg-brand-green' : ''}`}>
                   <img 
                     src={feature.image} 
                     alt={feature.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={`w-full ${feature.aspectRatio === "aspect-auto" ? "h-auto" : "h-full"} ${feature.objectFit || "object-cover"} transition-transform duration-700 group-hover:scale-110`}
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
-                    <div className="px-4 py-2 bg-white/90 backdrop-blur rounded-full text-xs font-black tracking-widest uppercase">
-                      Preview
-                    </div>
-                    <div className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-md">
-                      <Heart className="w-5 h-5 text-brand-pink" fill="currentColor" />
-                    </div>
-                  </div>
+                  {/* Image overlay removed */}
                 </div>
                 {/* Floating UI Elements over image */}
                 <motion.div 

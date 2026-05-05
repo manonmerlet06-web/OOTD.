@@ -11,6 +11,12 @@ export const IMAGES = {
   jeans: "https://lh3.googleusercontent.com/d/1D9KMCFCsQUd_wQeLhFPuNnzZsI_pfqrZ",
   ootd1: "https://lh3.googleusercontent.com/d/1bt8LuXVYbmCe20gkCb1ldD055ZwkMUty",
   ootd2: "https://lh3.googleusercontent.com/d/1qIYF8NH0oCto4OoBl2nYxvAXe8cftLEH",
+  ootd3: "https://lh3.googleusercontent.com/d/1roeiszGljqGG2SDn59FjlkiPx3LbUDdf",
+  ootd4: "https://lh3.googleusercontent.com/d/1iC4ybbmDtXIdSwvpvVstEyIDqjSWoBvF",
+  ootd5: "https://lh3.googleusercontent.com/d/1x4LrMQTIdsS256vTnRCx95sKdi8Ee5P-",
+  ootd6: "https://lh3.googleusercontent.com/d/16wOi3dRUqH9myUt7Wo9EFRYW4WazHtaB",
   wardrobe: "https://lh3.googleusercontent.com/d/1NiGsKJa0nt9cKFoD_jlts0ZUFPGNkcC5",
-  sweater: "https://lh3.googleusercontent.com/d/1Zdc1tzC5DrywXAPZPJ4Qp_iaBQeXVGfy"
+  sweater: "https://lh3.googleusercontent.com/d/1Zdc1tzC5DrywXAPZPJ4Qp_iaBQeXVGfy",
+  inspiration: "https://lh3.googleusercontent.com/d/1tbc8BkYIX3gsFmjh1QZRRP8W3xYHLXJE",
+  shopping: "https://lh3.googleusercontent.com/d/1MeytC8ePjRtmItrQrpcxjFK9DBSsT15A",
 };
