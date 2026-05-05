@@ -62,7 +62,7 @@ export default function StylePage() {
       </section>
 
       {/* Outfit Creation Section */}
-      <section className="px-6 py-32 bg-white text-brand-black">
+      <section className="px-6 py-32 text-brand-black">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="order-2 lg:order-1 relative">
@@ -133,7 +133,7 @@ export default function StylePage() {
       </section>
 
       {/* Inspiration Boards */}
-      <section className="px-6 py-32 bg-[#FDFCF8] text-brand-black">
+      <section className="px-6 py-32 text-brand-black">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-24 space-y-4">
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Current Inspirations</h2>
@@ -207,7 +207,7 @@ export default function StylePage() {
       </section>
 
       {/* CTA section inherited from FeaturesPage or a customized one */}
-      <section className="px-6 py-32 text-center bg-white text-brand-black">
+      <section className="px-6 py-32 text-center text-brand-black">
         <div className="max-w-4xl mx-auto space-y-12">
           <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase">
             Start <span className="text-brand-pink italic">styling</span>

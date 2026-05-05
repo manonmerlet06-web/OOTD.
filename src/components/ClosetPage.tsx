@@ -50,7 +50,9 @@ export default function ClosetPage() {
                         opacity: { delay: i * 0.1 },
                         y: { duration: 4 + i, repeat: Infinity, ease: "easeInOut" }
                     }}
-                    className="relative w-28 h-28 md:w-36 md:h-36 rounded-3xl bg-white shadow-2xl p-2 border border-white shrink-0 first:rotate-[-15deg] last:rotate-[15deg] hover:z-50 hover:scale-110 transition-transform cursor-pointer"
+                    className={`relative w-28 h-28 md:w-36 md:h-36 rounded-3xl shadow-2xl p-2 border-2 border-white/50 shrink-0 first:rotate-[-15deg] last:rotate-[15deg] hover:z-50 hover:scale-110 transition-transform cursor-pointer ${
+                        ["bg-brand-pink", "bg-brand-yellow", "bg-brand-lavender", "bg-brand-green", "bg-brand-pink"][i % 5]
+                    }`}
                     style={{ zIndex: i + 10 }}
                 >
                     <div className="w-full h-full rounded-2xl bg-gray-50 overflow-hidden">
@@ -146,7 +148,7 @@ export default function ClosetPage() {
       </section>
 
       {/* Organization Features & Insights */}
-      <section className="px-6 py-32 bg-white relative overflow-hidden">
+      <section className="px-6 py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">

@@ -47,10 +47,60 @@ export default function App() {
   return (
     <div className="relative overflow-hidden min-h-screen">
       {/* Global Background Blobs */}
-      <div className="blob w-[400px] h-[400px] bg-brand-pink top-[-100px] left-[-100px] rounded-full opacity-40" />
-      <div className="blob w-[600px] h-[600px] bg-brand-lavender bottom-[10%] right-[-200px] rounded-full opacity-30" />
-      <div className="blob w-[300px] h-[300px] bg-brand-yellow top-[40%] left-[-150px] rounded-full opacity-20" />
-      <div className="blob w-[500px] h-[500px] bg-brand-green bottom-[-100px] left-[20%] rounded-full opacity-10" />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.2, 1],
+          x: [0, 50, 0],
+          y: [0, 30, 0]
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="blob w-[500px] h-[500px] bg-brand-pink top-[-100px] left-[-100px] rounded-full opacity-40" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.1, 1],
+          x: [0, -30, 0],
+          y: [0, 50, 0]
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        className="blob w-[700px] h-[700px] bg-brand-lavender bottom-[15%] right-[-200px] rounded-full opacity-30" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.3, 1],
+          x: [0, 40, 0],
+          y: [0, -40, 0]
+        }}
+        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+        className="blob w-[400px] h-[400px] bg-brand-yellow top-[45%] left-[-150px] rounded-full opacity-25" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.2, 1],
+          x: [0, -60, 0],
+          y: [0, 20, 0]
+        }}
+        transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+        className="blob w-[600px] h-[600px] bg-brand-green bottom-[-150px] left-[25%] rounded-full opacity-15" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.4, 1],
+          x: [0, 20, 0],
+          y: [0, 60, 0]
+        }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        className="blob w-[500px] h-[500px] bg-brand-pink top-[20%] right-[10%] rounded-full opacity-20" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.2, 1],
+          x: [0, -40, 0],
+          y: [0, -30, 0]
+        }}
+        transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+        className="blob w-[450px] h-[450px] bg-brand-yellow bottom-[40%] right-[30%] rounded-full opacity-10" 
+      />
 
       {/* Progress Bar */}
       <motion.div
