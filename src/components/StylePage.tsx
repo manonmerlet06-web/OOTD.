@@ -4,10 +4,10 @@ import { useWaitlist } from "../context/WaitlistContext";
 import { IMAGES } from "../constants/images";
 
 const editorialLooks = [
-  { id: 1, title: "Golden Hour Glow", url: "https://images.unsplash.com/photo-1529139513402-5833777c615f?auto=format&fit=crop&q=80&w=800", size: "lg" },
-  { id: 2, title: "Modern Minimalism", url: "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&q=80&w=800", size: "sm" },
-  { id: 3, title: "Street Vibe", url: "https://images.unsplash.com/photo-1502033006978-cff2242cc739?auto=format&fit=crop&q=80&w=800", size: "md" },
-  { id: 4, title: "Pastel Dream", url: "https://images.unsplash.com/photo-1549570652-97324981a6fd?auto=format&fit=crop&q=80&w=800", size: "md" }
+  { id: 1, title: "Golden Hour Glow", url: IMAGES.ootd3, size: "lg" },
+  { id: 2, title: "Pastel Dream", url: IMAGES.ootd4, size: "sm" },
+  { id: 3, title: "Street Vibe", url: IMAGES.ootd9, size: "md" },
+  { id: 4, title: "Bohemian Martini", url: IMAGES.ootd7, size: "md" }
 ];
 
 export default function StylePage() {
@@ -145,7 +145,9 @@ export default function StylePage() {
               <motion.div 
                 key={look.id}
                 whileHover={{ y: -10 }}
-                className={`relative rounded-[2rem] overflow-hidden cursor-pointer group glass-card p-2 border-white/40 ${look.size === 'lg' ? 'row-span-2' : ''}`}
+                className={`relative rounded-[2rem] overflow-hidden cursor-pointer group glass-card p-2 border-white/40 ${
+                  look.size === 'lg' ? 'row-span-2 aspect-[3/4]' : 'aspect-square md:aspect-[4/5]'
+                }`}
               >
                 <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-gray-100">
                   <img src={look.url} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={look.title} referrerPolicy="no-referrer" />
