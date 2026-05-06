@@ -1,4 +1,5 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { Search, Filter, Hash, TrendingUp, Archive, Plus, ArrowRight } from "lucide-react";
 import { useWaitlist } from "../context/WaitlistContext";
 import { IMAGES } from "../constants/images";
@@ -18,6 +19,16 @@ const closetItems = [
 
 export default function ClosetPage() {
   const { open } = useWaitlist();
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredItems = closetItems.filter(item => {
+    const matchesCategory = activeCategory === "All" || item.category === activeCategory;
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                         item.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <div className="pt-24 min-h-screen relative">
       {/* Hero Section */}
@@ -74,10 +85,15 @@ export default function ClosetPage() {
           {/* Controls */}
           <div className="flex flex-col md:flex-row gap-6 items-center justify-between mb-12">
             <div className="flex gap-4 overflow-x-auto pb-2 w-full md:w-auto scrollbar-hide">
-              {categories.map((cat, i) => (
+              {categories.map((cat) => (
                 <button 
-                  key={i}
-                  className={`px-6 py-2 rounded-full font-black text-[10px] uppercase tracking-widest whitespace-nowrap transition-all ${i === 0 ? 'bg-brand-black text-white' : 'bg-white border border-gray-200 hover:border-brand-pink'}`}
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-6 py-2 rounded-full font-black text-[10px] uppercase tracking-widest whitespace-nowrap transition-all ${
+                    activeCategory === cat 
+                      ? 'bg-brand-black text-white shadow-lg' 
+                      : 'bg-white border border-gray-200 hover:border-brand-pink text-brand-black'
+                  }`}
                 >
                   {cat}
                 </button>
@@ -90,6 +106,8 @@ export default function ClosetPage() {
                 <input 
                   type="text" 
                   placeholder="Search item..." 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-white border border-gray-200 rounded-full py-3 pl-12 pr-6 text-sm font-medium focus:ring-2 focus:ring-brand-pink outline-none"
                 />
               </div>
@@ -100,49 +118,63 @@ export default function ClosetPage() {
           </div>
 
           {/* Grid */}
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-8 space-y-8">
-            {closetItems.map((item, idx) => (
-              <motion.div
-                key={item.id}
-                layoutId={`item-${item.id}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className={`relative group rounded-[2.5rem] p-3 overflow-hidden ${item.color} shadow-sm cursor-grab active:cursor-grabbing`}
-              >
-                <div className="aspect-[3/4] rounded-[2rem] overflow-hidden bg-white/60 relative">
-                  <img 
-                    src={item.url} 
-                    alt={item.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                      <Plus size={20} />
-                    </button>
-                  </div>
-                </div>
-                <div className="p-4 flex justify-between items-center">
-                  <div>
-                    <h3 className="font-bold text-sm">{item.name}</h3>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-black/50">{item.category}</p>
-                  </div>
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 rounded-full bg-brand-black/20" />
-                    <div className="w-2 h-2 rounded-full bg-brand-black/20" />
-                  </div>
-                </div>
-                
-                {/* Drag handle suggestion */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                    <div className="bg-white/80 backdrop-blur px-4 py-2 rounded-full text-[10px] font-black tracking-tighter uppercase border border-white/50 shadow-xl">
-                        Drag to combine
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-8 space-y-8 min-h-[400px]">
+            <AnimatePresence mode="popLayout">
+              {filteredItems.map((item) => (
+                <motion.div
+                  key={item.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  whileHover={{ y: -8 }}
+                  className={`relative group rounded-[2.5rem] p-3 overflow-hidden ${item.color} shadow-sm cursor-grab active:cursor-grabbing`}
+                >
+                  <div className="aspect-[3/4] rounded-[2rem] overflow-hidden bg-white/60 relative">
+                    <img 
+                      src={item.url} 
+                      alt={item.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <button className="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                        <Plus size={20} />
+                      </button>
                     </div>
-                </div>
+                  </div>
+                  <div className="p-4 flex justify-between items-center">
+                    <div>
+                      <h3 className="font-bold text-sm">{item.name}</h3>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-black/50">{item.category}</p>
+                    </div>
+                    <div className="flex gap-1">
+                      <div className="w-2 h-2 rounded-full bg-brand-black/20" />
+                      <div className="w-2 h-2 rounded-full bg-brand-black/20" />
+                    </div>
+                  </div>
+                  
+                  {/* Drag handle suggestion */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                      <div className="bg-white/80 backdrop-blur px-4 py-2 rounded-full text-[10px] font-black tracking-tighter uppercase border border-white/50 shadow-xl">
+                          Drag to combine
+                      </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+            
+            {filteredItems.length === 0 && (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="col-span-full py-20 text-center space-y-4"
+              >
+                <div className="text-4xl">🧥</div>
+                <p className="text-gray-400 font-medium tracking-tight">No items found matching your search.</p>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
