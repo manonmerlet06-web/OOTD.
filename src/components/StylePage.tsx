@@ -43,17 +43,17 @@ export default function StylePage() {
           >
             <div className="relative w-full max-w-[200px] aspect-[3/4] rounded-[2rem] overflow-hidden group">
               <img 
-                src={IMAGES.ootd1} 
+                src={IMAGES.ootd8} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
-                alt="OOTD 1"
+                alt="OOTD 8"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="relative w-full max-w-[200px] aspect-[3/4] rounded-[2rem] overflow-hidden group translate-y-12">
               <img 
-                src={IMAGES.ootd2} 
+                src={IMAGES.ootd6} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
-                alt="OOTD 2"
+                alt="OOTD 6"
                 referrerPolicy="no-referrer"
               />
             </div>

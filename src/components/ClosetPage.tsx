@@ -6,14 +6,14 @@ import { IMAGES } from "../constants/images";
 const categories = ["All", "Tops", "Bottoms", "Outerwear", "Shoes", "Accessories"];
 
 const closetItems = [
-  { id: 1, name: "Silk Slip Dress", category: "Dresses", url: IMAGES.dress, color: "bg-brand-pink" },
-  { id: 2, name: "Air Force 1", category: "Shoes", url: IMAGES.sneakers, color: "bg-brand-yellow" },
-  { id: 3, name: "Vintage Leather", category: "Outerwear", url: IMAGES.jacket, color: "bg-brand-green" },
-  { id: 4, name: "Shoulder Bag", category: "Accessories", url: IMAGES.bag, color: "bg-brand-lavender" },
-  { id: 5, name: "Beret Hat", category: "Accessories", url: IMAGES.hat, color: "bg-brand-pink" },
+  { id: 1, name: "Silk Slip Dress", category: "Dresses", url: IMAGES["slip dress"], color: "bg-brand-pink" },
+  { id: 2, name: "Flower Shoes", category: "Shoes", url: IMAGES["flower shoes"], color: "bg-brand-yellow" },
+  { id: 3, name: "Vintage Leather", category: "Outerwear", url: IMAGES.leather, color: "bg-brand-green" },
+  { id: 4, name: "Shoulder Bag", category: "Accessories", url: IMAGES["shoulder bag"], color: "bg-brand-lavender" },
+  { id: 5, name: "Head Scarf", category: "Accessories", url: IMAGES["head scarf"], color: "bg-brand-pink" },
   { id: 6, name: "Straight Jeans", category: "Bottoms", url: IMAGES.jeans, color: "bg-brand-yellow" },
-  { id: 7, name: "Floral Skirt", category: "Bottoms", url: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=800", color: "bg-brand-lavender" },
-  { id: 8, name: "Knit Sweater", category: "Tops", url: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&q=80&w=800", color: "bg-brand-green" },
+  { id: 7, name: "Floral Skirt", category: "Bottoms", url: IMAGES.skirt, color: "bg-brand-lavender" },
+  { id: 8, name: "Knit Sweater", category: "Tops", url: IMAGES["knit sweater"], color: "bg-brand-green" },
 ];
 
 export default function ClosetPage() {
@@ -203,7 +203,7 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src={IMAGES.jacket} className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
+                        <img src={IMAGES.leather} className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Most Worn</p>
@@ -216,11 +216,11 @@ export default function ClosetPage() {
                   <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
-                        <img src={IMAGES.hat} className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
+                        <img src={IMAGES["head scarf"]} className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
                       </div>
                       <div>
                         <p className="text-xs font-black uppercase text-brand-black/40">Least Worn</p>
-                        <p className="font-bold text-sm">Beret Hat</p>
+                        <p className="font-bold text-sm">Head Scarf</p>
                       </div>
                     </div>
                     <div className="text-xl font-black">2<span className="text-[10px] ml-1 opacity-50 uppercase">times</span></div>
@@ -231,7 +231,7 @@ export default function ClosetPage() {
                   className="mt-12 p-6 rounded-3xl bg-white/20 border border-white/30 backdrop-blur-sm text-center"
                 >
                   <p className="text-xs font-bold text-white uppercase tracking-widest mb-2">Pro Styling Tip</p>
-                  <p className="text-white/90 text-sm font-medium">Try matching your "Least Worn" item with your "Air Force 1" for a fresh vibe.</p>
+                  <p className="text-white/90 text-sm font-medium">Try matching your "Least Worn" item with your "Flower Shoes" for a fresh vibe.</p>
                 </motion.div>
               </motion.div>
             </div>
