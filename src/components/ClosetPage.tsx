@@ -232,30 +232,30 @@ export default function ClosetPage() {
                 <h3 className="text-white text-4xl font-black tracking-tighter mb-8 pr-12">Wardrobe Stats</h3>
                 
                 <div className="space-y-6">
-                  <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
+                  <div className="glass-card p-6 rounded-3xl flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-4 min-w-0">
+                      <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden shrink-0">
                         <img src={IMAGES.leather} className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
                       </div>
-                      <div>
-                        <p className="text-xs font-black uppercase text-brand-black/40">Most Worn</p>
-                        <p className="font-bold text-sm">Vintage Leather</p>
+                      <div className="min-w-0">
+                        <p className="text-xs font-black uppercase text-brand-black/40 truncate">Most Worn</p>
+                        <p className="font-bold text-sm truncate">Vintage Leather</p>
                       </div>
                     </div>
-                    <div className="text-xl font-black">24<span className="text-[10px] ml-1 opacity-50 uppercase">times</span></div>
+                    <div className="text-xl font-black shrink-0">24<span className="text-[10px] ml-1 opacity-50 uppercase">times</span></div>
                   </div>
 
-                  <div className="glass-card p-6 rounded-3xl flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden">
+                  <div className="glass-card p-6 rounded-3xl flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-4 min-w-0">
+                      <div className="w-12 h-12 rounded-2xl bg-white overflow-hidden shrink-0">
                         <img src={IMAGES["head scarf"]} className="w-full h-full object-cover" alt="Item" referrerPolicy="no-referrer" />
                       </div>
-                      <div>
-                        <p className="text-xs font-black uppercase text-brand-black/40">Least Worn</p>
-                        <p className="font-bold text-sm">Head Scarf</p>
+                      <div className="min-w-0">
+                        <p className="text-xs font-black uppercase text-brand-black/40 truncate">Least Worn</p>
+                        <p className="font-bold text-sm truncate">Head Scarf</p>
                       </div>
                     </div>
-                    <div className="text-xl font-black">2<span className="text-[10px] ml-1 opacity-50 uppercase">times</span></div>
+                    <div className="text-xl font-black shrink-0">2<span className="text-[10px] ml-1 opacity-50 uppercase">times</span></div>
                   </div>
                 </div>
                 

@@ -22,7 +22,7 @@ export const IMAGES = {
   ootd4: "https://lh3.googleusercontent.com/d/1iC4ybbmDtXIdSwvpvVstEyIDqjSWoBvF",
   ootd5: "https://lh3.googleusercontent.com/d/1x4LrMQTIdsS256vTnRCx95sKdi8Ee5P-",
   ootd6: "https://lh3.googleusercontent.com/d/16wOi3dRUqH9myUt7Wo9EFRYW4WazHtaB",
-  ootd7: "https://lh3.googleusercontent.com/d/1hA9Bxz-fWzUkkFcizM-THJ1d355Ywjg",
+  ootd7: "https://lh3.googleusercontent.com/d/1hA9Bxz-fWzUkkFcizM-THJ1d355Ywjg_",
   ootd8: "https://lh3.googleusercontent.com/d/1mJdnMoHqTcvaxR9-445Gfqrcoc05Ni3n",
   ootd9: "https://lh3.googleusercontent.com/d/1-junLT-CXLeF0ZnqzxuJtbKhQlfS7ppr",
   wardrobe: "https://lh3.googleusercontent.com/d/1NiGsKJa0nt9cKFoD_jlts0ZUFPGNkcC5",

@@ -171,8 +171,8 @@ export default function FeaturesPage() {
       </section>
 
       {/* Highlight Section */}
-      <section className="px-6 py-32 bg-brand-black text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full opacity-20">
+      <section className="px-6 py-32 bg-[#FDFCF8] text-brand-black relative overflow-hidden border-y border-gray-100">
+        <div className="absolute top-0 right-0 w-full h-full opacity-10">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-pink rounded-full blur-[120px]" />
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-yellow rounded-full blur-[120px]" />
         </div>
@@ -185,28 +185,28 @@ export default function FeaturesPage() {
             className="text-5xl md:text-8xl font-black tracking-tighter mb-8"
           >
             Your style, <br />
-            <span className="text-brand-yellow italic">powered by you</span>
+            <span className="text-brand-pink italic">powered by you</span>
           </motion.h2>
-          <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mb-16">
+          <p className="text-xl md:text-2xl text-gray-500 max-w-2xl mb-16">
             Everything in OOTD is tailored to your unique preferences. No generic trends, just what makes you feel your best.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             {[
-              { label: "Personalized", value: "100%", sub: "Tailored to you" },
-              { label: "AI Suggestions", value: "Unlimited", sub: "Available 24/7" },
-              { label: "Wardrobe ROI", value: "2.5x", sub: "Wear more of your closet" }
+              { label: "Personalized", value: "100%", sub: "Tailored to you", color: "text-brand-black", bgColor: "bg-brand-pink/20" },
+              { label: "AI Suggestions", value: "Unlimited", sub: "Available 24/7", color: "text-brand-black", bgColor: "bg-brand-lavender/40" },
+              { label: "Wardrobe ROI", value: "2.5x", sub: "Wear more of your closet", color: "text-brand-black", bgColor: "bg-brand-green/30" }
             ].map((stat, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur"
+                className={`p-8 rounded-3xl border border-white/50 shadow-sm ${stat.bgColor}`}
               >
-                <div className="text-4xl md:text-6xl font-black tracking-tighter text-brand-green mb-2">{stat.value}</div>
-                <div className="text-sm font-bold uppercase tracking-widest mb-1">{stat.label}</div>
-                <div className="text-xs text-gray-500 font-medium">{stat.sub}</div>
+                <div className={`text-4xl md:text-6xl font-black tracking-tighter ${stat.color} mb-2`}>{stat.value}</div>
+                <div className="text-sm font-bold uppercase tracking-widest mb-1 text-brand-black">{stat.label}</div>
+                <div className="text-xs text-brand-black/60 font-medium">{stat.sub}</div>
               </motion.div>
             ))}
           </div>
