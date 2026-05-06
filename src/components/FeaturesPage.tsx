@@ -231,13 +231,17 @@ export default function FeaturesPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
             <button 
-              onClick={open}
+              onClick={() => open(
+                "https://4b7e2a10.sibforms.com/serve/MUIFAJZ4XxBkAr-VxpPlLiyujiRBdOqoNW4rvE0M3mieSzwiqKqKm_S-Orgxfqs6aHs7ctcP5Op5KqtFY5Xxd_-mafgF0DRHOziTyZrtFk1tqiT5Qw52uggcqrlNosjhcKbFyJ3hqUCqHp0pz5A5KvtjVQkJ2fD2eaNt9X0snkyhwVzDB7UAQck4Qi3-DNvqn1KN1uSGCfu5flGCyg==",
+                "Download the App",
+                "GET ACCESS TO ALL OUR FEATURES"
+              )}
               className="w-full sm:w-auto bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-2xl hover:shadow-brand-pink/20 cursor-pointer"
             >
-              Start styling with OOTD <ArrowRight size={20} />
+              Download the app <ArrowRight size={20} />
             </button>
             <button 
-              onClick={open}
+              onClick={() => open()}
               className="w-full sm:w-auto bg-white border-2 border-brand-black text-brand-black px-12 py-6 rounded-full font-black text-lg hover:bg-gray-50 transition-colors cursor-pointer"
             >
               Watch Demo

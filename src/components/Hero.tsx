@@ -25,13 +25,17 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button 
-              onClick={open}
+              onClick={() => open(
+                "https://4b7e2a10.sibforms.com/serve/MUIFAJZ4XxBkAr-VxpPlLiyujiRBdOqoNW4rvE0M3mieSzwiqKqKm_S-Orgxfqs6aHs7ctcP5Op5KqtFY5Xxd_-mafgF0DRHOziTyZrtFk1tqiT5Qw52uggcqrlNosjhcKbFyJ3hqUCqHp0pz5A5KvtjVQkJ2fD2eaNt9X0snkyhwVzDB7UAQck4Qi3-DNvqn1KN1uSGCfu5flGCyg==",
+                "Download the App",
+                "GET ACCESS TO ALL OUR FEATURES"
+              )}
               className="bg-brand-black text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-transform cursor-pointer"
             >
               Download the app <Download size={20} />
             </button>
             <button 
-              onClick={open}
+              onClick={() => open()}
               className="bg-white border-2 border-brand-black px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-brand-black hover:text-white transition-all cursor-pointer"
             >
               Get started <ArrowRight size={20} />

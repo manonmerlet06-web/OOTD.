@@ -280,10 +280,14 @@ export default function ClosetPage() {
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={open}
+            onClick={() => open(
+              "https://4b7e2a10.sibforms.com/serve/MUIFAJZ4XxBkAr-VxpPlLiyujiRBdOqoNW4rvE0M3mieSzwiqKqKm_S-Orgxfqs6aHs7ctcP5Op5KqtFY5Xxd_-mafgF0DRHOziTyZrtFk1tqiT5Qw52uggcqrlNosjhcKbFyJ3hqUCqHp0pz5A5KvtjVQkJ2fD2eaNt9X0snkyhwVzDB7UAQck4Qi3-DNvqn1KN1uSGCfu5flGCyg==",
+              "Download the App",
+              "GET ACCESS TO ALL OUR FEATURES"
+            )}
             className="bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 mx-auto shadow-2xl hover:shadow-brand-pink/30 cursor-pointer"
           >
-            Start building your closet <ArrowRight size={20} />
+            Download the app <ArrowRight size={20} />
           </motion.button>
         </div>
       </section>

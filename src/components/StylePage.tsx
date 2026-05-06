@@ -166,7 +166,11 @@ export default function StylePage() {
                 <h3 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">All your inspiration, <br /> in one place.</h3>
                 <p className="text-gray-500 max-w-md mb-8">Connected to your item inventory, so you always know if you can pull off a saved look.</p>
                 <button 
-                    onClick={open}
+                    onClick={() => open(
+                      "https://4b7e2a10.sibforms.com/serve/MUIFAJZ4XxBkAr-VxpPlLiyujiRBdOqoNW4rvE0M3mieSzwiqKqKm_S-Orgxfqs6aHs7ctcP5Op5KqtFY5Xxd_-mafgF0DRHOziTyZrtFk1tqiT5Qw52uggcqrlNosjhcKbFyJ3hqUCqHp0pz5A5KvtjVQkJ2fD2eaNt9X0snkyhwVzDB7UAQck4Qi3-DNvqn1KN1uSGCfu5flGCyg==",
+                      "Download the App",
+                      "GET ACCESS TO ALL OUR FEATURES"
+                    )}
                     className="bg-brand-lavender text-brand-black px-10 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform flex items-center gap-3"
                 >
                     Sync Inspiration <Sparkles size={16} />
@@ -215,10 +219,14 @@ export default function StylePage() {
             Start <span className="text-brand-pink italic">styling</span>
           </h2>
           <button 
-            onClick={open}
+            onClick={() => open(
+              "https://4b7e2a10.sibforms.com/serve/MUIFAJZ4XxBkAr-VxpPlLiyujiRBdOqoNW4rvE0M3mieSzwiqKqKm_S-Orgxfqs6aHs7ctcP5Op5KqtFY5Xxd_-mafgF0DRHOziTyZrtFk1tqiT5Qw52uggcqrlNosjhcKbFyJ3hqUCqHp0pz5A5KvtjVQkJ2fD2eaNt9X0snkyhwVzDB7UAQck4Qi3-DNvqn1KN1uSGCfu5flGCyg==",
+              "Download the App",
+              "GET ACCESS TO ALL OUR FEATURES"
+            )}
             className="bg-brand-black text-white px-12 py-6 rounded-full font-black text-lg flex items-center justify-center gap-3 mx-auto shadow-2xl hover:shadow-brand-pink/30 cursor-pointer"
           >
-              Get Started with OOTD <ArrowRight size={20} />
+              Download the app <ArrowRight size={20} />
           </button>
         </div>
       </section>

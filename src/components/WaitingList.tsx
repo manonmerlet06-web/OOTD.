@@ -4,10 +4,17 @@ import { X } from "lucide-react";
 interface WaitlistModalProps {
   isOpen: boolean;
   onClose: () => void;
+  url?: string;
+  title?: string;
+  subtitle?: string;
 }
 
-export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
-  const formUrl = "https://4b7e2a10.sibforms.com/serve/MUIFAB_xrCnLKV6aHjeEoQ4beZialYkB7nnCJ0uU97-naZlccmBiOkkRDuQtU0QIdSban7oeQFfObiAtmGzWaMI28uPP8teBN_rf4GBlb6w2FgkF72corctnPpCmzRmDWm3_Koq7NHwBzC13E45qmMPcEcrYFIukWYiCW26kmjDbjTBMvuyZBAGNUbkbrQJ1tnyO-pAYZQpVexF_DA==";
+export default function WaitlistModal({ isOpen, onClose, url, title, subtitle }: WaitlistModalProps) {
+  const defaultUrl = "https://4b7e2a10.sibforms.com/serve/MUIFAB_xrCnLKV6aHjeEoQ4beZialYkB7nnCJ0uU97-naZlccmBiOkkRDuQtU0QIdSban7oeQFfObiAtmGzWaMI28uPP8teBN_rf4GBlb6w2FgkF72corctnPpCmzRmDWm3_Koq7NHwBzC13E45qmMPcEcrYFIukWYiCW26kmjDbjTBMvuyZBAGNUbkbrQJ1tnyO-pAYZQpVexF_DA==";
+  const formUrl = url || defaultUrl;
+
+  const displayTitle = title || "Join the Waitlist";
+  const displaySubtitle = subtitle || "Get early access to OOTD";
 
   return (
     <AnimatePresence>
@@ -32,8 +39,8 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
             {/* Header */}
             <div className="px-8 py-6 flex items-center justify-between border-b border-gray-100 bg-white shrink-0">
               <div>
-                <h2 className="text-2xl font-black tracking-tighter">Join the Waitlist</h2>
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">Get early access to OOTD</p>
+                <h2 className="text-2xl font-black tracking-tighter">{displayTitle}</h2>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">{displaySubtitle}</p>
               </div>
               <button 
                 onClick={onClose}
